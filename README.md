@@ -5,27 +5,12 @@ Here, we used some pre generated libraries and modify it's working process.
 ## Developed
 [![Sandip](https://avatars1.githubusercontent.com/u/31722942?v=4&u=18643bfaaba26114584d27693e9891db26bcb582&s=39) Sandip](https://github.com/SandipLayek27)  
 # ★ Gradle Dependency
-Add Gradle dependency in the build.gradle file of your application module (app in the most cases) :
-First Tab:
-
-```sh
-allprojects{
-    repositories{
-        jcenter()
-        maven {
-            url 'https://jitpack.io'
-        }
-    }
-}
-```
-
-AND
-
-```sh
-dependencies {
-    compile 'com.github.SandipLayek27:SuperLoader-master_android:2.0'
-}
-```
+Here, We download .jar file from link below and drop this jar file to your libs folder:
+LINK:-
+https://github.com/SandipLayek27/RuntimePermission/blob/master/app/libs/MarshmallowPermission.jar
+Now Copy this .jar file.
+and now, GoTo application Project file and libs folder and paste this .jar file here.
+Now sync your application again.
 
 # ★ Features are.
 1. Single Run-Time Permission.
