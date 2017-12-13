@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onPermissionsDenied(int requestCode, @NonNull List<String> perms) {
         if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
-            new AppSettingsDialog.Builder(this).build().show();
+            Toast.makeText(this, "Permission Denied, GoTo Application Settings Page and Grant Permissions.....", Toast.LENGTH_SHORT).show();
+            //new AppSettingsDialog.Builder(this).build().show();
         }
     }
 
