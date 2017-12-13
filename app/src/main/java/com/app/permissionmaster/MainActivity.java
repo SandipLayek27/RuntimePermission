@@ -3,6 +3,8 @@ package com.app.permissionmaster;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,22 +54,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
-
     @Override
     public void onPermissionsGranted(int requestCode, @NonNull List<String> perms) {
+        if(requestCode==123){
+            Toast.makeText(this, "Camera Permission Granted", Toast.LENGTH_SHORT).show();
+        }else if(requestCode==124){
 
+        }else{
+            Toast.makeText(this, "Something Wrong", Toast.LENGTH_SHORT).show();
+        }
     }
-
     @Override
     public void onPermissionsDenied(int requestCode, @NonNull List<String> perms) {
         if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
-            Toast.makeText(this, "Permission Denied, GoTo Application Settings Page and Grant Permissions.....", Toast.LENGTH_SHORT).show();
-            //new AppSettingsDialog.Builder(this).build().show();
+            Intent intent = new Intent();
+            intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+            Uri uri = Uri.fromParts("package", getPackageName(), null);
+            intent.setData(uri);
+            startActivity(intent);
         }
     }
-
-
-
     private boolean hasCameraPermission() {
         return EasyPermissions.hasPermissions(this, Manifest.permission.CAMERA);
     }
@@ -80,16 +86,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this);
-    }
-
-    @SuppressLint("StringFormatMatches")
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == AppSettingsDialog.DEFAULT_SETTINGS_REQ_CODE) {
-            boolean camPer=hasCameraPermission()?true:false;
-            boolean locationContact=hasLocationAndContactsPermissions()?true:false;
-            Toast.makeText(this, "CameraPermission:"+camPer+"\nLocationContact:"+locationContact, Toast.LENGTH_SHORT).show();
-        }
     }
 }
