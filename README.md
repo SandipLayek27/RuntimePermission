@@ -32,7 +32,7 @@ dependencies {
 2. Multiple Run-Time Permission.
 
 # ★ Screen
-![alt text](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/p1.png)
+![Activity Screen](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/p1.png)
 ![alt text](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/p2.png)
 ![alt text](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/p3.png)
 ![alt text](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/p4.png)
