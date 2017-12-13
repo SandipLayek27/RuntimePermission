@@ -31,3 +31,11 @@ dependencies {
 1. Single Run-Time Permission.
 2. Multiple Run-Time Permission.
 
+# ★ Screen
+![alt text](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/p1.png)
+![alt text](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/p2.png)
+![alt text](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/p3.png)
+![alt text](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/p4.png)
+![alt text](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/p5.png)
+![alt text](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/p6.png)
+![alt text](https://raw.githubusercontent.com/SandipLayek27/RuntimePermission/master/app/src/main/assets/pm1.png)
